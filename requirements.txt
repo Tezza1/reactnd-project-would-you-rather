@@ -1,0 +1,63 @@
+HIGH LEVEL OVERVIEW
+--------------------------------------------
+answer questions
+see which questions they haven’t answered
+see how other people have voted
+post questions
+see the ranking of users on the leaderboard
+
+establish strict rules for getting, listening, and updating the store
+what state should live inside of Redux
+what state should live inside of React components.
+
+--------------------------------------------
+REQUIREMENTS
+
+LOGIN
+1- login with login box
+2- show who is logged in on the page
+3- if not logged in and the user tries to navigate to a different page, the user should be asked to sign in
+4- the user should be allowed to sign in and out
+Once the user is logged in....
+
+HOMEPAGE
+5- toggle between answered and unanswered polls on the root/home page
+6- polls arranged from most recent (at top) to least recent (at the bottom)
+7- the unanswered questions should be shown by default
+
+QUESTIONS
+8- each polling question should link to the details of that poll -> questions/:question_id
+UNANSWERED
+9- Text “Would You Rather”
+10- Avatar of the user who posted the polling question
+11- Two options
+ANSWERED
+12- Text of the option
+13- Number of people who voted for that option
+14- Percentage of people who voted for that option
+15- Which option the logged in user chose
+VOTING
+16- Upon voting in a poll, all of the information of an answered poll should be displayed
+17- The user’s response should be recorded and clearly visible
+18- Users can only vote once per poll and they cann’t change their answer after they’ve voted
+19- When the user comes back to the home page, the polling question should appear in the “Answered” column
+ADD A QUESTION
+20- Post new questions -> /add
+21- The application should show the text “Would You Rather”
+22- have a form for creating two options.
+23- Upon submitting the form, a new poll should be created
+24- The user should be taken to the home page
+25- The new polling question should appear in the correct category on the home page.
+
+LEADERBOARD
+26- a leaderboard that’s available at the /leaderboard route
+27- User’s name
+28- User’s picture
+29- Number of questions the user asked
+30- Number of questions the user answered
+31- Users should be ordered in descending order based on the sum of the number of questions they’ve asked and answered
+
+OTHER
+32- Show 404 if a page doesn't exist
+33- have a navigation bar
+
