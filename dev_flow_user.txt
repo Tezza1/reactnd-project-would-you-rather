@@ -1,0 +1,22 @@
+LIST OF USERS
+Step 1 - create an array of empty users
+Step 2 - make API call to get list of users
+Step 3 - put the list of users in the store
+
+AUTHORIZATION
+Step 1 - create variable isLoggedIn
+Step 2 - set isLoggedIn to false
+Step 3 - user can login via login form
+Step 4 - as form submitted check userName against users in store
+Step 5 - if login name and name in store matched -> set user to name and isLoggedIn to true
+Step 6 - else display error and ask for login again
+Step 7 - display users and status in menu bar
+
+LOGOUT
+Step 1 - click on logout out button
+Step 2 - set user to blank
+Step 3 - set isLoggedIn to false
+
+SECURITY
+Step 1 - if isLoggedIn is false
+Step 2 - redirect to login page
