@@ -1,14 +1,13 @@
 import { GET_USERS } from '../actions/users'
 
-const initialState = {
-  users: []
-}
-
-function getUsers (state = initialState, action) {
+export default function getUsers (state = {}, action) {
   switch(action.type){
+    case GET_USERS:
+      return {
+        ...state,
+        ...action.users
+      }
     default:
       return state
   }
 }
-
-export default getUsers;

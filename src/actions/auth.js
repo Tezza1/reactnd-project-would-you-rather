@@ -1,4 +1,5 @@
-import { LOGIN_STATUS, LOGGED_IN_USER } from './types'
+export const LOGIN_STATUS = 'LOGIN_STATUS'
+export const LOGGED_IN_USER = 'LOGGED_IN_USER'
 
 export function loginStatus (status) {
   return {

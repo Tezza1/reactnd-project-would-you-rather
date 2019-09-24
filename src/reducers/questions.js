@@ -1,14 +1,14 @@
-import { GET_QUESTIONS } from '../actions/users'
+import { GET_QUESTIONS } from '../actions/questions'
 
-const initialState = {
-  questions: []
-}
-
-function questions (state = initialState, action) {
+export default function questions (state = {}, action) {
   switch(action.type){
+    case GET_QUESTIONS:
+      return {
+        ...state,
+        ...action.questions
+      }
     default:
       return state
   }
 }
 
-export default questions;

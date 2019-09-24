@@ -1,29 +1,20 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { handleGetUsers } from '../actions/users'
+import { handleGetQuestions } from '../actions/questions'
 import Menu from './Menu'
 import Header from './Header'
-import Login from './Login'
+// import Login from './Login'
+import HomePage from './HomePage'
 // import LeaderBoard from './LeaderBoard'
-import * as API from '../utils/_DATA.js'
+
 
 class App extends Component {
 
   componentDidMount() {
-    this.getQuestions()
-    this.getUsers()
-  }
-
-  getQuestions() {
-    API._getQuestions()
-      .then(questions => {
-        console.log('These are the questions:', questions)
-      })
-  }
-
-  getUsers() {
-    API._getUsers()
-      .then(users => {
-        console.log('These are the users:', users)
-      })
+    const { dispatch } = this.props
+    dispatch(handleGetUsers())
+    dispatch(handleGetQuestions())
   }
 
   render() {
@@ -31,10 +22,12 @@ class App extends Component {
       <div>
         <Menu />
         <Header />
-        <Login />
+        <HomePage />
       </div>
     )
   }
 }
 
-export default App
+export default connect(state => ({
+
+}))(App)
