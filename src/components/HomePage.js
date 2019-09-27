@@ -3,6 +3,8 @@ import Moment from 'react-moment'
 import { connect } from 'react-redux'
 import _ from 'lodash'
 import './HomePage.css'
+import Question from './Question'
+import QuestionDone from './Question_done'
 
 class HomePage extends Component {
 
@@ -23,37 +25,29 @@ class HomePage extends Component {
     }
 
     return(
-      <div className="ui container center aligned card-container">
-        <h2>
-          Unanswered questions
-        </h2>
-        <div className="ui cards">
-        {arr.map(item => (
-          <div className="card" key={item.id}>
-            <div className="content">
-              {/*<img className="right floated mini ui image" src="/images/avatar/large/elliot.jpg" />*/}
-              <div className="header">
-                {item.author}
-              </div>
-              <div className="meta">
-                <Moment format="DD MMMM YYYY">
-                  {item.timestamp}
-                </Moment>
-              </div>
-              <div className="description">
-                Choose one of the following options
-              </div>
-            </div>
-            <div className="extra content">
-              <div className="ui two buttons">
-                <div className="ui secondary button">{item.optionOne.text}</div>
-                <div className="ui basic black button">{item.optionTwo.text}</div>
-              </div>
-            </div>
+      <div>
+        <div className="ui container center aligned card-container">
+          <h2>
+            Unanswered questions
+          </h2>
+          <div className="ui cards">
+          {arr.map(item => (
+            <Question item={item} />
+          ))}
           </div>
-        ))}
         </div>
-      </div>
+        <br />
+        <div className="ui container center aligned card-container">
+          <h2>
+            Answered questions
+          </h2>
+          <div className="ui cards">
+          {arr.map(item => (
+            <QuestionDone item ={item} />
+          ))}
+          </div>
+        </div>
+    </div>
     )
   }
 }

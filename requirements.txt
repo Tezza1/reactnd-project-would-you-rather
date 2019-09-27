@@ -27,20 +27,24 @@ HOMEPAGE
 
 QUESTIONS
 8- each polling question should link to the details of that poll -> questions/:question_id
+
 UNANSWERED
 9- Text “Would You Rather”
 10- Avatar of the user who posted the polling question
 11- Two options
+
 ANSWERED
 12- Text of the option
 13- Number of people who voted for that option
 14- Percentage of people who voted for that option
 15- Which option the logged in user chose
+
 VOTING
 16- Upon voting in a poll, all of the information of an answered poll should be displayed
 17- The user’s response should be recorded and clearly visible
 18- Users can only vote once per poll and they cann’t change their answer after they’ve voted
 19- When the user comes back to the home page, the polling question should appear in the “Answered” column
+
 ADD A QUESTION
 20- Post new questions -> /add
 21- The application should show the text “Would You Rather”
